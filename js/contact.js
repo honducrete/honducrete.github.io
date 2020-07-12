@@ -11,6 +11,8 @@ $( "#btn-send" ).click(function(e) {
     if (!contact){
         $( "#invalid-in-contact" ).attr("hidden", false);
     }else{
+        var isEmail = false;
+        var isPhoneNumber = false;
         $( "#invalid-in-contact" ).attr("hidden", true);
         var url=`mailto:${emailHonducrete}?subject=${name} [Website contact]`;
         $( "#form-contact" ).attr("action", url);
