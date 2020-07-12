@@ -194,7 +194,7 @@
   </section>
 
   <!-- Descriptions -->
-  <section class="showcase border-bottom">
+  <section class="showcase">
     <div class="container-fluid p-0">
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
@@ -235,9 +235,10 @@
 
   <!-- Info, contact and map --> 
   <section class="showcase">
+    
     <div class="container-fluid p-0">
       <div class="row no-gutters" id="contact">
-        <div class="col-lg-6 my-auto showcase-text">
+        <div class="col-lg-6 my-auto showcase-text" id="contact-col">
           <h2 class="text-primary">Contact us</h2>
           <div class="row">
             <div class="col-md-4">
@@ -284,35 +285,36 @@
           <div>
             <div class="form-row">
               <div class="col-12 mb-2">
-                <input id="in-name" required type="text" class="form-control form-control-lg border-dark" placeholder="Name">
+                <input id="in-name" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Name">
               </div>
               <div class="col-12 mb-2">
-                <input id="in-contact" required type="text" class="form-control form-control-lg border-dark" placeholder="Phone number or e-mail">
-                <div id="invalid-in-contact" hidden class="text-danger">
+                <input id="in-contact" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Phone number or e-mail">
+                <div id="invalid-in-contact" class="text-danger" hidden="">
                   * Please fill this field with your phone number or e-mail so we can contact you back.
                 </div>
                 <small id="contact-help" class="form-text text-muted">We'll never share this information with anyone else.</small>
               </div>
               <div class="col-12 mb-2">
-                <textarea id="txt-message" required type="text" class="form-control form-control-lg border-dark" placeholder="Message"></textarea>
+                <textarea id="txt-message" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Message"></textarea>
               </div>
               <div class="col-12 mb-2">
                 <button id="btn-send" type="submit" class="btn btn-block btn-lg btn-primary">Send</button>
               </div>
             </div>
           </div>
-          <form hidden method="POST" enctype="text/plain" action="mailto:honducrete@gmail.com"  id="form-contact">
+          <form method="POST" enctype="text/plain" action="mailto:honducrete@gmail.com" id="form-contact" hidden="">
             <textarea id="mail-body" name="Message"></textarea>
-            <br/>
-            <input id="mail-contact" name="Contact"/>
+            <br>
+            <input id="mail-contact" name="Contact">
           </form>
 
         </div>
         <div class="col-lg-6 map-responsive">
-          <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.8003707803584!2d-96.78611909508169!3d32.922050514668506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c205c6da09f7b%3A0x75f54fc16db2b543!2s12700%20Hillcrest%20Rd%20%23125%2C%20Dallas%2C%20TX%2075230%2C%20EE.%20UU.!5e0!3m2!1ses!2shn!4v1586219097335!5m2!1ses!2shn" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.8003707803584!2d-96.78611909508169!3d32.922050514668506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c205c6da09f7b%3A0x75f54fc16db2b543!2s12700%20Hillcrest%20Rd%20%23125%2C%20Dallas%2C%20TX%2075230%2C%20EE.%20UU.!5e0!3m2!1ses!2shn!4v1586219097335!5m2!1ses!2shn" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="800" height="600" frameborder="0"></iframe>
         </div>
       </div>
     </div>
+  
   </section>
 
   <!-- Back to contact -->
