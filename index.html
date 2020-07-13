@@ -284,28 +284,64 @@
           <h2 class="text-primary">Send us a message</h2>
           <div>
             <div class="form-row">
-              <div class="col-12 mb-2">
-                <input id="in-name" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Name">
-              </div>
-              <div class="col-12 mb-2">
-                <input id="in-contact" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Phone number or e-mail">
-                <div id="invalid-in-contact" class="text-danger" hidden="">
-                  * Please fill this field with your phone number or e-mail so we can contact you back.
+              <div class="col-lg-6 mb-2">
+                <input id="in-first-name" required="" type="text" class="form-control form-control-lg border-dark" placeholder="First name">
+                <div id="invalid-in-first-name" class="text-danger" hidden="">
+                  Please enter your first name.
                 </div>
-                <small id="contact-help" class="form-text text-muted">We'll never share this information with anyone else.</small>
+                <div id="valid-in-first-name" class="text-success" hidden="">
+                  Nice.
+                </div>
+              </div>
+              <div class="col-lg-6 mb-2">
+                <input id="in-last-name" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Last name">
+                <div id="invalid-in-last-name" class="text-danger" hidden="">
+                  Please enter your last name.
+                </div>
+                <div id="valid-in-last-name" class="text-success" hidden="">
+                  Nice.
+                </div>
+              </div>
+              <div class="col-6 mb-2">
+                <input id="in-email" required type="text" class="form-control form-control-lg border-dark" placeholder="Email">
+                <div id="invalid-in-email" class="text-danger" hidden="">
+                  Invalid email.
+                </div>
+                <div id="valid-in-email" class="text-success" hidden="">
+                  Nice.
+                </div>
+              </div>
+              <div class="col-6 mb-2">
+                <input id="in-phone" type="text" class="form-control form-control-lg border-dark" placeholder="Phone number(optional)">
+                <div id="invalid-in-phone" class="text-danger" hidden="">
+                  Invalid phone number.
+                </div>
+                <div id="valid-in-phone" class="text-success" hidden="">
+                  Nice.
+                </div>
               </div>
               <div class="col-12 mb-2">
-                <textarea id="txt-message" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Message"></textarea>
+                <small id="help" class="form-text text-muted">We'll never share this information with anyone else.</small>
+              </div>
+              <div class="col-12 mb-2">
+                <textarea id="txt-message" required="" type="text" class="form-control form-control-lg border-dark" placeholder="Comments/Questions"></textarea>
+                <div id="invalid-txt-message" class="text-danger" hidden="">
+                  Please enter your comments and/or questions.
+                </div>
+                <div id="valid-txt-message" class="text-success" hidden="">
+                  Nice.
+                </div>
               </div>
               <div class="col-12 mb-2">
                 <button id="btn-send" type="submit" class="btn btn-block btn-lg btn-primary">Send</button>
               </div>
             </div>
           </div>
-          <form method="POST" enctype="text/plain" action="mailto:honducrete@gmail.com" id="form-contact" hidden="">
+          <form method="POST" enctype="text/plain" action="mailto:honducrete.inc@gmail.com" id="form-contact" hidden="">
             <textarea id="mail-body" name="Message"></textarea>
             <br>
-            <input id="mail-contact" name="Contact">
+            <input id="mail-email" name="Email">
+            <input id="mail-phone" name="Phone number">
           </form>
 
         </div>
