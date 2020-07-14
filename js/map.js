@@ -6,8 +6,8 @@ $( document ).ready(setMap);
 $( window ).resize(setMap);
 
 function setMap(){
-    width = $("#map-container").width();
-    height = $("#map-container").height();
+    width = $("#contact-info").width();
+    height = $("#contact-info").height();
     var mapFrame = `<iframe src="${mapURL}" width="${width}" height="${height}" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`;
     $("#map-container").html(mapFrame);
 }
