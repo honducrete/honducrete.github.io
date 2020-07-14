@@ -4,21 +4,7 @@ var email = "";
 var phone = "";
 var message = "";
 const emailHonducrete = "honducrete.inc@gmail.com";
-$( "#btn-send" ).click(function(e) {
 
-    if (!email){
-        $( "#invalid-in-email" ).attr("hidden", false);
-    }else{
-        var isEmail = false;
-        var isPhoneNumber = false;
-        $( "#invalid-in-contact" ).attr("hidden", true);
-        var url=`mailto:${emailHonducrete}?subject=${firstName}  [Website contact]`;
-        $( "#form-contact" ).attr("action", url);
-        $( "#mail-body" ).val(message);
-        $( "#mail-contact" ).val(contact);
-        $( "#form-contact" ).submit();
-    }
-});
 
 $( "#btn-send" ).click(function(e) {
     e.preventDefault();
@@ -27,17 +13,17 @@ $( "#btn-send" ).click(function(e) {
     var validEmail = checkEMailInput();
     var validPhoneNumber = checkPhoneInput();
     var validMessage = checkMessageInput();
-    if(((validFirstName && validLastName) && (validEmail && validPhoneNumber)) && validMessage){
+    if(validFirstName && validLastName && validEmail && validPhoneNumber && validMessage){
         sendContactMail();
     }
 });
 
 function sendContactMail(){
-    firstName = $( "#in-first-name" ).val();
-    lastName = $( "#in-last-name" ).val();
-    email = $( "#in-email" ).val();
+    firstName = $( "#in-first-name" ).val().trim();
+    lastName = $( "#in-last-name" ).val().trim();
+    email = $( "#in-email" ).val().trim();
     phone = $( "#in-phone" ).val().replace(/[^0-9]/g,'');
-    message = $( "#txt-message" ).val();
+    message = $( "#txt-message" ).val().trim();
     var url=`mailto:${emailHonducrete}?subject=${firstName} ${lastName} [Website contact]`;
     $( "#form-contact" ).attr("action", url);
     $( "#mail-body" ).val(message);
@@ -68,50 +54,46 @@ $('#txt-message').on('input', function (evt) {
 
 function checkFirstNameInput(){
     var input = $( "#in-first-name" ).val();
-    var isBlank = !input;
-    $("#valid-in-first-name").attr("hidden",isBlank);
-    $("#invalid-in-first-name").attr("hidden",!isBlank);
-    return !isBlank
+    var valid = !(isBlank(input));
+    $("#invalid-in-first-name").attr("hidden",valid);
+    console.log("First Name: "+ valid);
+    return valid;
 }
 
 function checkLastNameInput(){
     var input = $( "#in-last-name" ).val();
-    var isBlank = !input;
-    $("#valid-in-last-name").attr("hidden",isBlank);
-    $("#invalid-in-last-name").attr("hidden",!isBlank);
-    return !isBlank
+    var valid = !(isBlank(input));
+    $("#invalid-in-last-name").attr("hidden",valid);
+    console.log("Last Name: "+ valid);
+    return valid
 }
 
 function checkEMailInput(){
     var input = $( "#in-email" ).val();
-    var isEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+)+$/.test(input);
-    $("#valid-in-email").attr("hidden",!isEmail);
-    $("#invalid-in-email").attr("hidden",isEmail);
-    return isEmail;
+    var valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+)+$/.test(input);
+    $("#invalid-in-email").attr("hidden",valid);
+    console.log("Email: "+ valid);
+    return valid;
 }
 
 function checkPhoneInput(){
     var input = $( "#in-phone" ).val();
-    input = input.replace(/[^0-9]/g,'');
-    var isPhone = (input.length == 10);
-    var isPhoneEmpty = !input;
-    if(isPhoneEmpty){
-        $("#invalid-in-phone").attr("hidden",isPhoneEmpty);
-        $("#valid-in-phone").attr("hidden",isPhoneEmpty);
-    }else if(isPhone){
-        $("#invalid-in-phone").attr("hidden",isPhone);
-        $("#valid-in-phone").attr("hidden",!isPhone);
-    }else{
-        $("#invalid-in-phone").attr("hidden",isPhone);
-        $("#valid-in-phone").attr("hidden",!isPhone);
-    }
-    return isPhone || isPhoneEmpty;
+    var onlyNumbers = input.replace(/[^0-9]/g,'');
+    var valid = (onlyNumbers.length == 10) || (isBlank(input));
+    $("#invalid-in-phone").attr("hidden", valid);
+    console.log("Phone number: "+ valid);
+    return valid;
 }
 
 function checkMessageInput(){
     var input = $( "#txt-message" ).val();
-    var isBlank = !input;
-    $("#valid-txt-message").attr("hidden",isBlank);
-    $("#invalid-txt-message").attr("hidden",!isBlank);
-    return !isBlank;
+    var valid = !(isBlank(input));
+    $("#invalid-txt-message").attr("hidden",valid);
+    console.log("Message: "+ valid);
+    return valid;
+}
+
+function isBlank(str){
+    var removedSpaces = str.replace(/\s/g,"");
+    return (removedSpaces.length == 0);
 }
