@@ -7,15 +7,15 @@ $( document ).ready(function(){
     windowWidth = $(window).width();
     windowHeight = $(window).height();
     window.addEventListener("resize", setMap);
-    setMap();
+    setMap(true);
 });
 
 
-function setMap(){
+function setMap(firstLoad){
     var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     width = $("#contact-info").width();
     if (isMobile) {
-        if (windowWidth != $(window).width()){
+        if ((windowWidth != $(window).width()) || firstLoad ){
             height = width;
             var mapFrame = `<iframe src="${mapURL}" width="${width}" height="${height}" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`;
             $("#map-container").html(mapFrame);
