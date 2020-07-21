@@ -3,7 +3,7 @@ var lastName = "";
 var email = "";
 var phone = "";
 var message = "";
-const emailHonducrete = "honducrete.inc@gmail.com";
+const emailHonducrete = "contact@honducrete.com";
 
 
 $( "#btn-send" ).click(function(e) {
