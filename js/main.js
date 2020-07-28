@@ -18,4 +18,5 @@ function resizeLogo(){
     }else{
         $("#header-logo").width(width);
     }
+    $("#header-logo").attr("hidden",false);
 }
