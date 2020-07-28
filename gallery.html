@@ -1,0 +1,67 @@
+<!-- Contact Modal -->
+  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contact-modal">Send us a message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="col-lg-6 mb-2">
+              <input id="in-first-name" required="" type="text" class="form-control form-control-lg border-dark"
+                placeholder="First name">
+              <div id="invalid-in-first-name" class="text-danger" hidden="">
+                Please enter your first name.
+              </div>
+            </div>
+            <div class="col-lg-6 mb-2">
+              <input id="in-last-name" required="" type="text" class="form-control form-control-lg border-dark"
+                placeholder="Last name">
+              <div id="invalid-in-last-name" class="text-danger" hidden="">
+                Please enter your last name.
+              </div>
+            </div>
+            <div class="col-lg-6 mb-2">
+              <input id="in-email" required type="text" class="form-control form-control-lg border-dark"
+                placeholder="Email">
+              <div id="invalid-in-email" class="text-danger" hidden="">
+                Please enter a valid email.
+              </div>
+            </div>
+            <div class="col-lg-6 mb-2">
+              <input id="in-phone" type="text" class="form-control form-control-lg border-dark"
+                placeholder="Phone number(optional)">
+              <div id="invalid-in-phone" class="text-danger" hidden="">
+                Invalid phone number.
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <small id="help" class="form-text text-muted">We'll never share your information with anyone else.</small>
+            </div>
+            <div class="col-12 mb-2">
+              <textarea id="txt-message" required="" type="text" class="form-control form-control-lg border-dark"
+                placeholder="Comments/Questions"></textarea>
+              <div id="invalid-txt-message" class="text-danger" hidden="">
+                Please enter your comments and/or questions.
+              </div>
+            </div>
+          </div>
+          <form method="POST" enctype="text/plain" action="mailto:contact@honducrete.com" id="form-contact" hidden="">
+            <textarea id="mail-body" name="Message"></textarea>
+            <br>
+            <input id="mail-email" name="Email">
+            <input id="mail-phone" name="Phone number">
+            <input name="Language" value="English">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="btn-send-message" type="button" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>

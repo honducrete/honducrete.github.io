@@ -3,10 +3,9 @@ var lastName = "";
 var email = "";
 var phone = "";
 var message = "";
-const emailHonducrete = "contact@honducrete.com";
 
 
-$( "#btn-send" ).click(function(e) {
+$( "#btn-send-message" ).click(function(e) {
     e.preventDefault();
     var validFirstName = checkFirstNameInput();
     var validLastName = checkLastNameInput();
@@ -24,8 +23,7 @@ function sendContactMail(){
     email = $( "#in-email" ).val().trim();
     phone = $( "#in-phone" ).val().replace(/[^0-9]/g,'');
     message = $( "#txt-message" ).val().trim();
-    var url=`mailto:${emailHonducrete}?subject=${firstName} ${lastName} [Website contact]`;
-    $( "#form-contact" ).attr("action", url);
+    $( "#mail-name" ).val(firstName+" "+lastName);
     $( "#mail-body" ).val(message);
     $( "#mail-email" ).val(email);
     $( "#mail-phone" ).val(phone);
