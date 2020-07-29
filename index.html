@@ -89,14 +89,10 @@
   </header>
 
   <!-- Services -->
-  <section class="showcase text-white text-center" style="background-color:rgba(2, 117, 216, 1);">
-    <div class="container-fluid p-0" id="services">
-      <h2 class="py-5 my-0 mx-auto">Our services</h2>
-    </div>
-  </section>
-  <section class="features-icons bg-white text-justify">
+  <section class="features-icons bg-white text-justify border-bottom border-primary" id="services">
     <div class="container">
       <div class="row">
+        <h2 class="text-primary">Our services</h2>
         <div class="col-12">
           <p class="lead mb-1">
             We have a variety of services to meet any of your needs in every project. Honducrete Redi Mix, Inc is ready
@@ -128,14 +124,10 @@
   </section>
 
   <!-- About -->
-  <section class="showcase text-white text-center" style="background-color:rgba(2, 117, 216, 1);">
-    <div class="container-fluid p-0" id="about">
-      <h2 class="py-5 my-0 mx-auto">About us</h2>
-    </div>
-  </section>
-  <section class="features-icons bg-white text-justify">
+  <section class="features-icons bg-white text-justify border-bottom border-primary" id="about">
     <div class="container">
       <div class="row">
+        <h2 class="text-primary">About us</h2>
         <div class="col-12">
           <p class="lead mb-1">
             Honducrete Redi Mix, Inc, with more than 5 years of experience in the market and we provide customers with a
@@ -156,16 +148,14 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section class="showcase text-white text-center" style="background-color:rgba(2, 117, 216, 1);">
-    <div class="container-fluid p-0" id="contact">
-      <h2 class="py-5 my-0 mx-auto">Contact us</h2>
-    </div>
-  </section>
-  <section class="showcase">
+  <!-- Contact -->
+  <section class="showcase border-bottom border-primary" id="contact">
     <div class="container-fluid p-0" id="contact-info">
       <div class="row no-gutters">
-        <div id="" class="col-lg-6 my-auto showcase-text">
+        <div class="col-lg-6 my-auto showcase-text border-primary border-md-bottom">
+          <div class="row mb-3">
+            <h2 class="text-primary">Contact us</h2>
+          </div>
           <div class="row">
             <div class="col-md-4">
               <h5>Email Address</h5>
@@ -283,12 +273,12 @@
   </footer>
 
   <!-- Contact Modal -->
-  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal"
+  <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-title"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="contact-modal">Send us a message</h5>
+          <h5 class="modal-title" id="contact-modal-title">Send us a message</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -344,12 +334,12 @@
   </div>
 
   <!-- Quote Modal -->
-  <div class="modal fade" id="quote-modal" tabindex="-1" role="dialog" aria-labelledby="quote-modal"
+  <div class="modal fade" id="quote-modal" tabindex="-1" role="dialog" aria-labelledby="quote-modal-title"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="quote-modal">Get a quote</h5>
+          <h5 class="modal-title" id="quote-modal-title">Get a quote</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -447,14 +437,14 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>  
+  <script src="vendor/jquery/jquery.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="vendor/jquery/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
   <script src="js/contact.js"></script>
   <script src="js/quote.js"></script>
   <script src="js/main.js"></script>

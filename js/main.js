@@ -4,7 +4,15 @@ $( document ).ready(function() {
         window.location.href = 'es.html';
     }*/
     resizeLogo();
-    
+
+    if(window.location.href.indexOf('#contact-modal') != -1) {
+        $('#contact-modal').modal('show');
+    }
+
+    if(window.location.href.indexOf('#quote-modal') != -1) {
+        $('#quote-modal').modal('show');
+    }
+
 });
 
 $( window ).resize(function() {
