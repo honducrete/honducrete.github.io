@@ -13,6 +13,29 @@ $( document ).ready(function() {
         $('#quote-modal').modal('show');
     }
 
+    var mixHelpPopoverContent = '<p>Some of the most common mixes are:</p>'+
+            '<ul>'+
+                '<li>3000psi</li>'+
+                '<li>3500psi</li>'+
+                '<li>4000psi</li>'+
+                '<li>4500psi</li>'+
+                '<li>5000psi</li>'+
+                '<li>122 Pea Gravel</li>'+
+                '<li>116LP Pump Mix</li>'+
+            '</ul>';
+
+    $('#mix-help-popover').popover({
+        placement : 'top',
+        html : true,
+        title : 'Common Mixes <a href="#" class="close" data-dismiss="alert">&times;</a>',
+        content : mixHelpPopoverContent,
+        trigger: 'focus'
+    });
+
+    $(document).on("click", ".popover .close" , function(evt){
+        evt.preventDefault();
+        $(this).parents(".popover").popover('hide');
+    });
 });
 
 $( window ).resize(function() {

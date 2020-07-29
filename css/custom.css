@@ -4,10 +4,24 @@
     position: relative;;
     height:0;
 }
+
 .map-responsive iframe{
     left:0;
     top:0;
     height:100%;
     width:100%;
     position:absolute;
+}
+
+.btn-rounded {
+    
+    border: 2px solid rgba(58, 133, 191, 0.75);
+    border-radius: 50px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+  }
+
+.popover-title .close{
+    position: relative;
+    bottom: 3px;
 }

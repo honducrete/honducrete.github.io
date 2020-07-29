@@ -2,6 +2,10 @@ var firstName = "";
 var lastName = "";
 var email = "";
 var phone = "";
+var mix = "";
+var yards = "";
+var address = "";
+var date = "";
 var message = "";
 
 $( "#btn-send-quote" ).click(function(e) {
@@ -10,8 +14,10 @@ $( "#btn-send-quote" ).click(function(e) {
     var validLastName = checkLastNameInputQuote();
     var validEmail = checkEMailInputQuote();
     var validPhoneNumber = checkPhoneInputQuote();
-    var validMessage = checkMessageInputQuote();
-    if(validFirstName && validLastName && validEmail && validPhoneNumber && validMessage){
+    var validMix = checkMixInputQuote();
+    var validYards = checkYardsInputQuote();
+    var validAddress = checkAddressTxtQuote();
+    if(validFirstName && validLastName && validEmail && validPhoneNumber && validMix && validYards && validAddress){
         sendQuoteMail();
     }
 });
@@ -22,10 +28,18 @@ function sendQuoteMail(){
     email = $( "#in-email-quote" ).val().trim();
     phone = $( "#in-phone-quote" ).val().replace(/[^0-9]/g,'');
     message = $( "#txt-message-quote" ).val().trim();
+    mix = $( "#in-mix-quote" ).val().trim();
+    yards = $( "#in-yards-quote" ).val().trim();
+    date = $( "#in-date-quote" ).val().trim();
+    address = $( "#txt-address-quote" ).val().trim();
     $( "#mail-name-quote" ).val(firstName+" "+lastName);
     $( "#mail-body-quote" ).val(message);
     $( "#mail-email-quote" ).val(email);
     $( "#mail-phone-quote" ).val(phone);
+    $( "#mail-mix-quote" ).val(mix);
+    $( "#mail-yards-quote" ).val(yards);
+    $( "#mail-date-quote" ).val(date);
+    $( "#mail-address-quote" ).val(address);
     $( "#form-quote" ).submit();
 }
 
@@ -45,8 +59,16 @@ $('#in-phone-quote').on('input', function (evt) {
     checkPhoneInputQuote();
 })
 
-$('#txt-message-quote').on('input', function (evt) {
-    checkMessageInputQuote();
+$('#in-mix-quote').on('input', function (evt) {
+    checkMixInputQuote();
+})
+
+$('#in-yards-quote').on('input', function (evt) {
+    checkYardsInputQuote();
+})
+
+$('#txt-address-quote').on('input', function (evt) {
+    checkAddressTxtQuote();
 })
 
 function checkFirstNameInputQuote(){
@@ -82,12 +104,28 @@ function checkPhoneInputQuote(){
     return valid;
 }
 
-function checkMessageInputQuote(){
-    var input = $( "#txt-message-quote" ).val();
+function checkMixInputQuote(){
+    var input = $( "#in-mix-quote" ).val();
     var valid = !(isBlank(input));
-    $("#invalid-txt-message-quote").attr("hidden",valid);
-    console.log("Message: "+ valid);
-    return valid;
+    $("#invalid-in-mix-quote").attr("hidden",valid);
+    console.log("Last Name: "+ valid);
+    return valid
+}
+
+function checkYardsInputQuote(){
+    var input = $( "#in-yards-quote" ).val();
+    var valid = !(isBlank(input));
+    $("#invalid-in-yards-quote").attr("hidden",valid);
+    console.log("Last Name: "+ valid);
+    return valid
+}
+
+function checkAddressTxtQuote(){
+    var input = $( "#txt-address-quote" ).val();
+    var valid = !(isBlank(input));
+    $("#invalid-txt-address-quote").attr("hidden",valid);
+    console.log("Last Name: "+ valid);
+    return valid
 }
 
 function isBlank(str){

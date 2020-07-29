@@ -92,7 +92,9 @@
   <section class="features-icons bg-white text-justify border-bottom border-primary" id="services">
     <div class="container">
       <div class="row">
-        <h2 class="text-primary">Our services</h2>
+        <div class="col-12">
+          <h2 class="text-primary">Our services</h2>
+        </div>
         <div class="col-12">
           <p class="lead mb-1">
             We have a variety of services to meet any of your needs in every project. Honducrete Redi Mix, Inc is ready
@@ -127,7 +129,9 @@
   <section class="features-icons bg-white text-justify border-bottom border-primary" id="about">
     <div class="container">
       <div class="row">
-        <h2 class="text-primary">About us</h2>
+        <div class="col-12">
+          <h2 class="text-primary">About us</h2>
+        </div>
         <div class="col-12">
           <p class="lead mb-1">
             Honducrete Redi Mix, Inc, with more than 5 years of experience in the market and we provide customers with a
@@ -374,17 +378,20 @@
                 Invalid phone number.
               </div>
             </div>
-            <div class="col-lg-6 mb-2">
+            <div class="col-lg-6 col-11 mb-2">
               <input id="in-mix-quote" required="" type="text" class="form-control form-control-lg border-dark"
                 placeholder="Mix">
               <div id="invalid-in-mix-quote" class="text-danger" hidden="">
                 Please enter a mix for the quote.
               </div>
             </div>
-            <div class="col-lg-6 mb-2">
+            <div class="col-1 mb-2 text-center">
+              <button type="button" class="btn btn-sm btn-outline-primary btn-rounded" data-toggle="popover" id="mix-help-popover">?</button>
+            </div>
+            <div class="col-lg-5 mb-2">
               <input id="in-yards-quote" required="" type="text" class="form-control form-control-lg border-dark"
                 placeholder="Yards">
-              <div id="invalid-in-last-name-quote" class="text-danger" hidden="">
+              <div id="invalid-in-yards-quote" class="text-danger" hidden="">
                 Please enter the amount you need in yards.
               </div>
             </div>
@@ -430,7 +437,7 @@
     <input id="mail-phone-quote" name="Phone number">
     <input id="mail-body-quote" name="Message">
     <input id="mail-address-quote" name="Address">
-    <input id="mail-delivery-date-quote" name="Delivery date">
+    <input id="mail-date-quote" name="Delivery date (YYYY-MM-DD)">
     <input id="mail-mix-quote" name="Mix">
     <input id="mail-yards-quote" name="Yards">
   </form>
@@ -439,11 +446,11 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>  
   <script src="vendor/jquery/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
   <script src="js/contact.js"></script>
   <script src="js/quote.js"></script>
